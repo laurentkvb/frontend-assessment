@@ -12,7 +12,14 @@ exports[`AnimeCard renders AnimeCard unchanged 1`] = `
       <img
         alt="Attack on Titan"
         class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-        src="https://example.com/cover.jpg"
+        data-nimg="1"
+        decoding="async"
+        height="300"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fexample.com%2Fcover.jpg&w=640&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fcover.jpg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fcover.jpg&w=640&q=75 2x"
+        style="color: transparent;"
+        width="300"
       />
     </div>
     <div

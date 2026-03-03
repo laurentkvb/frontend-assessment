@@ -33,7 +33,10 @@ describe(AnimeCard.name, () => {
     expect(screen.getByText('Attack on Titan')).toBeInTheDocument();
 
     const image = screen.getByRole('img');
-    expect(image).toHaveAttribute('src', mockAnime.coverImage.large);
+    expect(image).toHaveAttribute(
+      'src',
+      expect.stringContaining(encodeURIComponent(mockAnime.coverImage.large)),
+    );
     expect(image).toHaveAttribute('alt', 'Attack on Titan');
   });
 
