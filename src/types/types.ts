@@ -11,11 +11,7 @@ export interface MediaCover {
 
 export type Anime = {
   Page: {
-    media: {
-      coverImage: MediaCover;
-      id: string;
-      title: MediaTitle;
-    }[];
+    media: GetAnimeListResponse[];
   };
 };
 
