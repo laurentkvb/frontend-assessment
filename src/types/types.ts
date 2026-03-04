@@ -11,6 +11,13 @@ export interface MediaCover {
 
 export type Anime = {
   Page: {
+    pageInfo: {
+      total: number;
+      currentPage: number;
+      lastPage: number;
+      hasNextPage: boolean;
+      perPage: number;
+    }
     media: GetAnimeListResponse[];
   };
 };

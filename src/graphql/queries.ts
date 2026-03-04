@@ -21,6 +21,13 @@ query ($id: Int) {
 export const GET_ANIME_LIST = `
 query ($page: Int) {
   Page(page: $page, perPage: 20) { 
+    pageInfo {
+      total
+      currentPage
+      lastPage
+      hasNextPage
+      perPage
+    }
     media(type: ANIME) {
       id
       title {
@@ -34,4 +41,3 @@ query ($page: Int) {
   }
 }
 `;
-
