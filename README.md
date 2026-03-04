@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anime Explorer
 
-## Getting Started
+Anime Explorer is a small frontend assignment built with Next.js and GraphQL. It lists anime from a GraphQL API and provides a detail page for each anime.
 
-First, run the development server:
+## Key features
+
+- Built with Next.js (app router) and TypeScript
+- Fetches data from a GraphQL API
+- List view (overview) and detail page for each anime
+- Unit tests for components (Jest + React Testing Library)
+- End-to-end tests using Playwright
+- Husky pre-commit hook that runs lint-staged and Playwright headless before commits
+- Enforced Conventional Commits for commit messages
+
+## Project structure (top-level)
+
+- `src/app` — Next.js app routes and pages
+- `src/components` — UI components including `AnimeCard`
+- `src/lib` — helper utilities (e.g. GraphQL fetcher)
+- `src/graphql` — GraphQL queries
+- `src/types` — shared TypeScript types
+- `e2e` — Playwright tests
+
+## Getting started
+
+1. Install dependencies
+
+```bash
+npm install
+# or
+pnpm install
+# or
+yarn install
+```
+
+2. (Optional) Install Playwright browsers for local E2E runs
+
+```bash
+npx playwright install
+```
+
+3. Run the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Quick examples
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Run unit tests only:
 
-## Learn More
+```bash
+npm run test
+```
 
-To learn more about Next.js, take a look at the following resources:
+- Run Playwright E2E tests (headless by default):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run test-e2e
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Run Playwright UI mode (opens the Playwright test runner UI):
 
-## Deploy on Vercel
+```bash
+npm run test-e2e-ui
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Run unit + E2E together:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run test-all
+```
+
+## Testing details
+
+### Unit tests
+
+This project uses Jest and React Testing Library for unit testing. Tests live next to the components (for example `src/components/AnimeCard/AnimeCard.test.tsx`). Run unit tests with:
+
+```bash
+npm run test
+```
+
+### End-to-end tests (Playwright)
+
+Playwright tests to run using UI:
+
+```bash
+npm run test-e2e-ui
+```
+
+For CI or headless runs:
+
+```bash
+npm run test-e2e
+```
+
+
+## Deployment
+
+The app is deployed on Vercel at:
+
+https://frontend-assessment-phi.vercel.app/
