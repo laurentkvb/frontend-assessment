@@ -1,6 +1,6 @@
 # Anime Explorer
 
-Anime Explorer is a small frontend assignment built with Next.js and GraphQL. It lists anime from a GraphQL API and provides a detail page for each anime.
+Anime Explorer is a small frontend built with Next.js and GraphQL. It lists anime from a GraphQL API and provides a detail page for each anime.
 
 ## Key features
 
