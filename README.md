@@ -96,10 +96,3 @@ For CI or headless runs:
 ```bash
 npm run test-e2e
 ```
-
-
-## Deployment
-
-The app is deployed on Vercel at:
-
-https://frontend-assessment-phi.vercel.app/
